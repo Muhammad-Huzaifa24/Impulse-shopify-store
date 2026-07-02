@@ -1,17 +1,26 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { printInvoice } from '../utils/invoice'
 import { getOrders } from '../utils/orders'
 import OrdersModal from '../components/OrdersModal'
+import Toast from '../components/Toast'
 
 export default function OrderSuccess() {
+  const location = useLocation()
   const [order, setOrder] = useState(null)
   const [showOrders, setShowOrders] = useState(false)
+  const [toast, setToast] = useState(null)
 
   useEffect(() => {
     const raw = sessionStorage.getItem('impulse_last_order')
     if (raw) setOrder(JSON.parse(raw))
-  }, [])
+
+    if (location.state?.emailSent === true) {
+      setToast({ type: 'success', message: 'Confirmation email sent — check your inbox.' })
+    } else if (location.state?.emailSent === false) {
+      setToast({ type: 'error', message: "Order placed, but we couldn't send the confirmation email." })
+    }
+  }, [location.state])
 
   return (
     <div className="mx-auto flex max-w-lg flex-col items-center px-5 py-24 text-center">
@@ -75,6 +84,8 @@ export default function OrderSuccess() {
       </div>
 
       {showOrders && <OrdersModal orders={getOrders()} onClose={() => setShowOrders(false)} />}
+
+      {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
     </div>
   )
 }

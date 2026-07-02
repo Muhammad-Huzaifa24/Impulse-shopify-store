@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
 import EmptyState from '../components/EmptyState'
 import { saveOrder } from '../utils/orders'
+import { sendOrderConfirmationEmail } from '../utils/email'
 
 const FIELDS = [
   { name: 'fullName', label: 'Full name', type: 'text', span: 2 },
@@ -20,6 +21,7 @@ export default function Checkout() {
     fullName: '', email: '', phone: '', address: '', city: '', postalCode: '',
   })
   const [errors, setErrors] = useState({})
+  const [placing, setPlacing] = useState(false)
 
   if (cart.length === 0) {
     return (
@@ -44,9 +46,11 @@ export default function Checkout() {
     return Object.keys(next).length === 0
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
     if (!validate()) return
+
+    setPlacing(true)
 
     const order = {
       id: `ORD-${Date.now().toString().slice(-8)}`,
@@ -57,8 +61,12 @@ export default function Checkout() {
     }
     sessionStorage.setItem('impulse_last_order', JSON.stringify(order))
     saveOrder(order)
+
+    const emailResult = await sendOrderConfirmationEmail(order)
+
     clearCart()
-    navigate('/order-success')
+    setPlacing(false)
+    navigate('/order-success', { state: { emailSent: emailResult.ok } })
   }
 
   return (
@@ -88,9 +96,10 @@ export default function Checkout() {
 
           <button
             type="submit"
-            className="mt-8 w-full bg-charcoal px-6 py-3.5 text-sm font-medium tracking-wide text-cream transition-colors hover:bg-rust sm:w-auto sm:px-10"
+            disabled={placing}
+            className="mt-8 w-full bg-charcoal px-6 py-3.5 text-sm font-medium tracking-wide text-cream transition-colors hover:bg-rust disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:px-10"
           >
-            Place order
+            {placing ? 'Placing order…' : 'Place order'}
           </button>
         </form>
 
