@@ -35,7 +35,7 @@ export default function Navbar() {
             <Link
               key={link.label}
               to={link.to}
-              className="text-sm font-medium tracking-wide text-charcoal-soft transition-colors hover:text-rust"
+              className="nav-underline text-sm font-medium tracking-wide text-charcoal-soft transition-colors hover:text-rust"
             >
               {link.label}
             </Link>
