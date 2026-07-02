@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
 import EmptyState from '../components/EmptyState'
+import { saveOrder } from '../utils/orders'
 
 const FIELDS = [
   { name: 'fullName', label: 'Full name', type: 'text', span: 2 },
@@ -55,6 +56,7 @@ export default function Checkout() {
       date: new Date().toISOString(),
     }
     sessionStorage.setItem('impulse_last_order', JSON.stringify(order))
+    saveOrder(order)
     clearCart()
     navigate('/order-success')
   }
