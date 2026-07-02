@@ -1,0 +1,134 @@
+[
+  {
+    "id": "p1",
+    "name": "Heavyweight Crewneck Tee",
+    "category": "Shirts",
+    "price": 42,
+    "discount": 0,
+    "description": "Cut from 240gsm combed cotton for a soft, structured drape that holds its shape wash after wash. A wardrobe staple built for every season.",
+    "image": "https://picsum.photos/seed/impulse-tee1/800/1000",
+    "gallery": ["https://picsum.photos/seed/impulse-tee1/800/1000", "https://picsum.photos/seed/impulse-tee1b/800/1000"],
+    "colors": ["Olive", "Charcoal", "Cream"]
+  },
+  {
+    "id": "p2",
+    "name": "Relaxed Overshirt Jacket",
+    "category": "Outerwear",
+    "price": 128,
+    "discount": 15,
+    "description": "A brushed cotton-twill overshirt with a relaxed body and dropped shoulder. Layer it open over tees or button it up as a light jacket.",
+    "image": "https://picsum.photos/seed/impulse-jacket1/800/1000",
+    "gallery": ["https://picsum.photos/seed/impulse-jacket1/800/1000", "https://picsum.photos/seed/impulse-jacket1b/800/1000"],
+    "colors": ["Stone", "Charcoal"]
+  },
+  {
+    "id": "p3",
+    "name": "Marled Knit Sweater",
+    "category": "Shirts",
+    "price": 76,
+    "discount": 0,
+    "description": "A flecked wool-blend knit with a ribbed collar and hem. Warm without the bulk, made for layering into the colder months.",
+    "image": "https://picsum.photos/seed/impulse-knit1/800/1000",
+    "gallery": ["https://picsum.photos/seed/impulse-knit1/800/1000"],
+    "colors": ["Stone", "Olive"]
+  },
+  {
+    "id": "p4",
+    "name": "Waxed Field Jacket",
+    "category": "Outerwear",
+    "price": 214,
+    "discount": 10,
+    "description": "Weatherproof waxed cotton with a corduroy collar and brass hardware. Built for long days outside, styled for everywhere else.",
+    "image": "https://picsum.photos/seed/impulse-field1/800/1000",
+    "gallery": ["https://picsum.photos/seed/impulse-field1/800/1000"],
+    "colors": ["Rust", "Charcoal"]
+  },
+  {
+    "id": "p5",
+    "name": "Straight Leg Denim",
+    "category": "Bottoms",
+    "price": 98,
+    "discount": 0,
+    "description": "Rigid selvedge denim in a classic straight cut. Breaks in beautifully, fading exactly where you wear it most.",
+    "image": "https://picsum.photos/seed/impulse-denim1/800/1000",
+    "gallery": ["https://picsum.photos/seed/impulse-denim1/800/1000"],
+    "colors": ["Indigo"]
+  },
+  {
+    "id": "p6",
+    "name": "Pleated Wool Trouser",
+    "category": "Bottoms",
+    "price": 132,
+    "discount": 0,
+    "description": "A soft wool-blend trouser with a single pleat and tapered leg. Dresses up a tee or dresses down a blazer with equal ease.",
+    "image": "https://picsum.photos/seed/impulse-trouser1/800/1000",
+    "gallery": ["https://picsum.photos/seed/impulse-trouser1/800/1000"],
+    "colors": ["Charcoal", "Stone"]
+  },
+  {
+    "id": "p7",
+    "name": "Canvas Tote Bag",
+    "category": "Accessories",
+    "price": 38,
+    "discount": 0,
+    "description": "Heavy 16oz canvas with reinforced stitching and leather straps. Fits a laptop, a market run, or a weekend away.",
+    "image": "https://picsum.photos/seed/impulse-tote1/800/1000",
+    "gallery": ["https://picsum.photos/seed/impulse-tote1/800/1000"],
+    "colors": ["Natural"]
+  },
+  {
+    "id": "p8",
+    "name": "Suede Chelsea Boot",
+    "category": "Footwear",
+    "price": 186,
+    "discount": 20,
+    "description": "A classic Chelsea silhouette in soft suede with a stacked leather heel and elastic gusset. Built to be worn in daily.",
+    "image": "https://picsum.photos/seed/impulse-boot1/800/1000",
+    "gallery": ["https://picsum.photos/seed/impulse-boot1/800/1000"],
+    "colors": ["Rust", "Charcoal"]
+  },
+  {
+    "id": "p9",
+    "name": "Ribbed Beanie",
+    "category": "Accessories",
+    "price": 28,
+    "discount": 0,
+    "description": "A tight-ribbed merino wool beanie with a folded cuff. One size, unlined, made to layer under a hood.",
+    "image": "https://picsum.photos/seed/impulse-beanie1/800/1000",
+    "gallery": ["https://picsum.photos/seed/impulse-beanie1/800/1000"],
+    "colors": ["Olive", "Cream", "Charcoal"]
+  },
+  {
+    "id": "p10",
+    "name": "Linen Blend Shirt",
+    "category": "Shirts",
+    "price": 68,
+    "discount": 0,
+    "description": "A breathable linen-cotton weave with a relaxed collar and single chest pocket. Light enough for warm days, textured enough to layer.",
+    "image": "https://picsum.photos/seed/impulse-linen1/800/1000",
+    "gallery": ["https://picsum.photos/seed/impulse-linen1/800/1000"],
+    "colors": ["Stone", "Olive"]
+  },
+  {
+    "id": "p11",
+    "name": "Leather Card Wallet",
+    "category": "Accessories",
+    "price": 54,
+    "discount": 0,
+    "description": "Full-grain leather in a slim bifold cut. Develops a rich patina with use, holds four cards and folded bills.",
+    "image": "https://picsum.photos/seed/impulse-wallet1/800/1000",
+    "gallery": ["https://picsum.photos/seed/impulse-wallet1/800/1000"],
+    "colors": ["Rust", "Charcoal"]
+  },
+  {
+    "id": "p12",
+    "name": "Low Top Leather Sneaker",
+    "category": "Footwear",
+    "price": 142,
+    "discount": 0,
+    "description": "Minimal leather sneaker on a cupsole base. Clean lines and a neutral palette make it an everyday default.",
+    "image": "https://picsum.photos/seed/impulse-sneaker1/800/1000",
+    "gallery": ["https://picsum.photos/seed/impulse-sneaker1/800/1000"],
+    "colors": ["Cream", "Charcoal"]
+  }
+]
